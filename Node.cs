@@ -7,7 +7,7 @@ namespace binary
     {
         private Node LeftNode;
         private Node RightNode;
-        private int? _value;
+        public int? _value;
   
 
         #region Recursive insert
@@ -55,6 +55,24 @@ namespace binary
              if(RightNode == null)
                     return;
             RightNode.Search(value);            
+        }
+
+        #endregion
+
+
+
+        #region loop
+
+        public void Order(Node rootNode)
+        {
+            if(rootNode._value == null) return;
+
+            if(rootNode.LeftNode != null)
+                rootNode.Order(rootNode.LeftNode);
+            Console.WriteLine("{0}", rootNode._value.ToString());
+
+            if(rootNode.RightNode != null)
+                rootNode.Order(rootNode.RightNode);
         }
 
         #endregion

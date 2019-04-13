@@ -10,7 +10,7 @@ namespace binary
              var rand = new Random();
              var rngList = new List<int>();
 
-            for (int i = 0; i < 100000; i++)
+            for (int i = 0; i < 100; i++)
             {
                 rngList.Add(rand.Next(1000));
             }
@@ -28,8 +28,12 @@ namespace binary
 
             tree.Search(num);
 
+            tree.OrderTree(tree);
+          
+
             Console.ReadLine();
         }
+
     }
 
 

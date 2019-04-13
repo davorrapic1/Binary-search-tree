@@ -19,6 +19,11 @@ namespace binary
          rootNode.Search(value);
      }
 
+        public void OrderTree(Tree tree)
+        {
+            tree.rootNode.Order(tree.rootNode);
+        }
+
     }
 
 
